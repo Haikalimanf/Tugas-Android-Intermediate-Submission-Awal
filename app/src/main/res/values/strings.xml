@@ -43,4 +43,16 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+
+    <string name="login_to_your_account">Login to your account</string>
+    <string name="email">Email</string>
+    <string name="input_your_email">Input your email</string>
+    <string name="input_your_password">Input your password</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="don_t_have_an_account_sign_up">Don’t have an account? Sign Up</string>
+    <string name="don_t_have_an_account_sign_in">Already have an account? Sign In</string>
+    <string name="username">Username</string>
+    <string name="input_your_username">Input your username</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
