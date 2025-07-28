@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_addStoryActivity"
+            app:destination="@id/addStoryActivity" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -21,8 +24,12 @@
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_detail_story">
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
     </fragment>
+    <activity
+        android:id="@+id/addStoryActivity"
+        android:name="com.hakif.StoryApp.ui.addStory.AddStoryActivity"
+        android:label="activity_add_story"
+        tools:layout="@layout/activity_add_story" />
+
+
 </navigation>
