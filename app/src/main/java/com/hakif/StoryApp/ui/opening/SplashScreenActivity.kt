@@ -9,7 +9,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.hakif.StoryApp.R
 import com.hakif.StoryApp.ui.auth.signIn.SignInActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

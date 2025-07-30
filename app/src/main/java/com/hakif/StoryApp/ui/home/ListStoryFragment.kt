@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.hakif.StoryApp.databinding.FragmentListStoryBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ListStoryFragment : Fragment() {
 
     private var _binding: FragmentListStoryBinding? = null

@@ -8,16 +8,15 @@ import android.text.TextPaint
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.view.View
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.hakif.StoryApp.MainActivity
+import com.hakif.StoryApp.ui.MainActivity
 import com.hakif.StoryApp.R
 import com.hakif.StoryApp.databinding.ActivitySignInBinding
 import com.hakif.StoryApp.ui.auth.signUp.SignUpActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SignInActivity : AppCompatActivity() {
 
     private var _binding: ActivitySignInBinding? = null

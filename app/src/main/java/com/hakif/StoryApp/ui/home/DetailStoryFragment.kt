@@ -9,9 +9,9 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.hakif.StoryApp.R
 import com.hakif.StoryApp.databinding.FragmentDetailStoryBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
-
+@AndroidEntryPoint
 class DetailStoryFragment : BottomSheetDialogFragment() {
 
     private var _binding: FragmentDetailStoryBinding? = null
