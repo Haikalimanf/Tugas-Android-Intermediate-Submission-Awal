@@ -48,16 +48,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/login_to_your_account"
+            android:fontFamily="@font/poppins_medium"
             android:textColor="@color/black"
             android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
             android:layout_marginTop="10dp"
             android:text="@string/email"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/edt_email"
@@ -66,6 +68,7 @@
             android:background="@drawable/edit_text_border"
             android:hint="@string/input_your_email"
             android:textColorHint="@color/gray"
+            android:fontFamily="@font/poppins"
             android:layout_marginTop="5dp"
             android:paddingStart="15dp"
             android:paddingEnd="16dp"
@@ -77,39 +80,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins"
             android:text="@string/password"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutPassword"
+        <com.hakif.StoryApp.ui.customView.PassEditText
+            android:id="@+id/edt_password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="51dp"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/input_your_password"
             android:textColorHint="@color/gray"
             android:layout_marginTop="5dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="16dp"
+            android:autofillHints="password"
             android:textSize="14sp"
-            app:endIconMode="password_toggle"
-            app:endIconTint="@color/gray"
-            app:hintEnabled="false"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:inputType="textPassword" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autofillHints="password"
-                android:background="@drawable/edit_text_border"
-                android:hint="@string/input_your_password"
-                android:inputType="textPassword" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <androidx.appcompat.widget.AppCompatButton
+        <com.hakif.StoryApp.ui.customView.MyButton
             android:id="@+id/btn_signIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:background="@drawable/button_rounded"
-            android:backgroundTint="@color/blue"
             android:text="@string/sign_in"
             android:textColor="@color/white"
         />

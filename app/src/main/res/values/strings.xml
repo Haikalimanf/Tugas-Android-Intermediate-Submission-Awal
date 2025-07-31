@@ -55,4 +55,10 @@
     <string name="username">Username</string>
     <string name="input_your_username">Input your username</string>
     <string name="sign_up">Sign Up</string>
+    <string name="post">Post</string>
+    <string name="cancel">Cancel</string>
+    <string name="write_your_story_here">Write your story here</string>
+    <string name="description">Description</string>
+    <string name="choose_from_gallery">Choose From Gallery</string>
+    <string name="create_your_account">Create your Account</string>
 </resources>

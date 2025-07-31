@@ -111,7 +111,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Choose From Gallery" />
+                        android:text="@string/choose_from_gallery" />
 
                 </LinearLayout>
 
@@ -124,7 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Description"
+            android:text="@string/description"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
@@ -137,7 +137,7 @@
             android:autofillHints="name"
             android:background="@drawable/edit_text_border"
             android:gravity="top|start"
-            android:hint="Write your story here"
+            android:hint="@string/write_your_story_here"
             android:inputType="textMultiLine"
             android:padding="16dp"
             android:textColorHint="@color/gray"
@@ -146,26 +146,25 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.hakif.StoryApp.ui.customView.MyButton
             android:id="@+id/btn_post"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:background="@drawable/button_rounded"
-            android:text="Post"
+            android:text="@string/post"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edt_description" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.hakif.StoryApp.ui.customView.MyButton
             android:id="@+id/btn_cancel"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@drawable/button_rounded"
             android:backgroundTint="@color/red_light"
-            android:text="Cancel"
+            android:text="@string/cancel"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

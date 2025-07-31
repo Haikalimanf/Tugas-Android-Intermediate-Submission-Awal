@@ -5,6 +5,7 @@
     <color name="gray">#FF808080</color>
     <color name="gray_light">#FFEEEEEE</color>
     <color name="blue">#FF6091F0</color>
+    <color name="blue_200">#FFAAC2F1</color>
     <color name="red_light">#FFF47066</color>
     <color name="green">#FF4CAF50</color>
 </resources>
