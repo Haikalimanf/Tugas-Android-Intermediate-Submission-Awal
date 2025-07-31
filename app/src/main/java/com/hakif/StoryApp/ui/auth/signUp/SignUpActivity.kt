@@ -46,16 +46,24 @@ class SignUpActivity : AppCompatActivity() {
                 viewModel.registerState.collect { state ->
                     when(state) {
                         is AuthState.Idle -> {
-                            // Initial state, do nothing
+                            binding.progressBar.visibility = View.GONE
+                            binding.btnSignUp.isEnabled = true
                         }
                         is AuthState.Loading -> {
-                            // Show loading indicator
-
+                            binding.progressBar.visibility = View.VISIBLE
+                            binding.btnSignUp.isEnabled = false
                         }
                         is AuthState.Success -> {
+                            binding.progressBar.visibility = View.GONE
+                            binding.btnSignUp.isEnabled = false
                             Toast.makeText(this@SignUpActivity, "Registration successful", Toast.LENGTH_SHORT).show()
+                            val intent = Intent(this@SignUpActivity, SignInActivity::class.java)
+                            startActivity(intent)
+                            finish()
                         }
                         is AuthState.Error -> {
+                            binding.progressBar.visibility = View.GONE
+                            binding.btnSignUp.isEnabled = true
                             Toast.makeText(this@SignUpActivity, state.message , Toast.LENGTH_SHORT).show()
                         }
                     }
