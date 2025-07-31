@@ -1,5 +1,6 @@
 package com.hakif.StoryApp.data.network.retrofit
 
+import com.hakif.StoryApp.data.network.response.LoginResponse
 import com.hakif.StoryApp.data.network.response.RegisterResponse
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -20,6 +21,6 @@ interface ApiService {
     suspend fun login(
         @Field("email") email: String,
         @Field("password") password: String
-    ): RegisterResponse
+    ): LoginResponse
 
 }

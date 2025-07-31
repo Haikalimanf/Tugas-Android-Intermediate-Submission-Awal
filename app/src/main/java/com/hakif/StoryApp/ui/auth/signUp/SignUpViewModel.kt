@@ -18,8 +18,8 @@ class SignUpViewModel @Inject constructor(
     private val authRepository: AuthRepository
 ) : ViewModel() {
 
-    private val _registerState = MutableStateFlow<AuthState>(AuthState.Idle)
-    val registerState: StateFlow<AuthState> get() = _registerState
+    private val _registerState = MutableStateFlow<AuthState<RegisterResponse>>(AuthState.Idle)
+    val registerState: StateFlow<AuthState<RegisterResponse>> get() = _registerState
 
     fun register(name: String, email: String, password: String) {
         _registerState.value = AuthState.Loading
