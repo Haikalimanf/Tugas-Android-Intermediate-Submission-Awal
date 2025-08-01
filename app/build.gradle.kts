@@ -65,6 +65,9 @@ dependencies {
 
     implementation(libs.datastore.preferences)
 
+    implementation(libs.glide.v4150)
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

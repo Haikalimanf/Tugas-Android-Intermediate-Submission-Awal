@@ -2,9 +2,13 @@ package com.hakif.StoryApp.data.network.retrofit
 
 import com.hakif.StoryApp.data.network.response.LoginResponse
 import com.hakif.StoryApp.data.network.response.RegisterResponse
+import com.hakif.StoryApp.data.network.response.story.GetStoryResponse
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface ApiService {
 
@@ -22,5 +26,12 @@ interface ApiService {
         @Field("email") email: String,
         @Field("password") password: String
     ): LoginResponse
+
+    @GET("stories")
+    suspend fun getStories(
+        @Query("page") page: Int? = null,
+        @Query("size") size: Int? = null,
+        @Query("location") location: Int? = 0
+    ): GetStoryResponse
 
 }

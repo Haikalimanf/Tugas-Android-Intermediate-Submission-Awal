@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.hakif.StoryApp.R
 import com.hakif.StoryApp.databinding.FragmentDetailStoryBinding
@@ -21,17 +22,35 @@ class DetailStoryFragment : BottomSheetDialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         _binding = FragmentDetailStoryBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        showDetailStory()
+        closeDetailStory()
     }
+
+    private fun closeDetailStory() {
+        binding.btnClose.setOnClickListener {
+            dismiss()
+        }
+    }
+
+    private fun showDetailStory() {
+        val name = arguments?.getString("name")
+        val description = arguments?.getString("description")
+        val photoUrl = arguments?.getString("photoUrl")
+
+        binding.tvUsername.text = name
+        binding.tvDescription.text = description
+        Glide.with(requireContext())
+            .load(photoUrl)
+            .into(binding.imgStory)
+    }
+
 
     companion object {
         const val TAG = "DetailStoryFragment"
