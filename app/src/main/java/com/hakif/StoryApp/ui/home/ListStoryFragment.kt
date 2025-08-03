@@ -37,10 +37,6 @@ class ListStoryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        binding.buttonFirst.setOnClickListener {
-//            val bottomSheet = DetailStoryFragment()
-//            bottomSheet.show(parentFragmentManager, DetailStoryFragment.TAG)
-//        }
         showStory()
     }
 
