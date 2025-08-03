@@ -37,9 +37,9 @@ class DetailStoryFragment : BottomSheetDialogFragment() {
     }
 
     private fun showDetailStory() {
-        val name = arguments?.getString("name")
-        val description = arguments?.getString("description")
-        val photoUrl = arguments?.getString("photoUrl")
+        val name = arguments?.getString(EXTRA_NAME)
+        val description = arguments?.getString(EXTRA_DESCRIPTION)
+        val photoUrl = arguments?.getString(EXTRA_PHOTO_URL)
 
         binding.tvUsername.text = name
         binding.tvDescription.text = description
@@ -51,6 +51,9 @@ class DetailStoryFragment : BottomSheetDialogFragment() {
 
     companion object {
         const val TAG = "DetailStoryFragment"
+        const val EXTRA_NAME = "name"
+        const val EXTRA_DESCRIPTION = "description"
+        const val EXTRA_PHOTO_URL = "photoUrl"
     }
 
     override fun onDestroyView() {

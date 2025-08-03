@@ -1,155 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
+    android:fillViewport="true"
     tools:context=".ui.auth.signUp.SignUpActivity">
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/imageView"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:lottie_fileName="sign_up_anim.json"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" >
+        android:padding="24dp">
 
-        <TextView
-            android:layout_width="match_parent"
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:text="@string/create_your_account"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/poppins"
-            android:text="@string/username"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/edt_username"
-            android:layout_width="match_parent"
-            android:layout_height="51dp"
-            android:fontFamily="@font/poppins"
-            android:background="@drawable/edit_text_border"
-            android:hint="@string/input_your_username"
-            android:layout_marginTop="4dp"
-            android:textColorHint="@color/gray"
-            android:paddingStart="15dp"
-            android:paddingEnd="16dp"
-            android:autofillHints="username"
-            android:textSize="14sp"
-            android:inputType="textEmailAddress" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins"
-            android:layout_marginTop="10dp"
-            android:text="@string/email"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/edt_email"
-            android:layout_width="match_parent"
-            android:layout_height="51dp"
-            android:background="@drawable/edit_text_border"
-            android:hint="@string/input_your_email"
-            android:fontFamily="@font/poppins"
-            android:textColorHint="@color/gray"
-            android:paddingStart="15dp"
-            android:layout_marginTop="4dp"
-            android:paddingEnd="16dp"
-            android:autofillHints="username"
-            android:textSize="14sp"
-            android:inputType="textEmailAddress" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/password"
-            android:fontFamily="@font/poppins"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-
-        <com.hakif.StoryApp.ui.customView.PassEditText
-            android:id="@+id/edt_password"
-            android:layout_width="match_parent"
-            android:layout_height="51dp"
-            android:layout_marginTop="5dp"
-            android:autofillHints="password"
-            android:background="@drawable/edit_text_border"
-            android:fontFamily="@font/poppins"
-            android:hint="@string/input_your_password"
-            android:inputType="textPassword"
-            android:paddingStart="15dp"
-            android:paddingEnd="16dp"
-            android:textColorHint="@color/gray"
-            android:textSize="14sp" />
-
-        <com.hakif.StoryApp.ui.customView.MyButton
-            android:id="@+id/btn_signUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:fontFamily="@font/poppins"
-            android:text="@string/sign_up"
-            android:textColor="@color/white"
-        />
-
-        <TextView
-            android:id="@+id/tvSignIn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/poppins"
-            android:text="@string/don_t_have_an_account_sign_in"
-            android:textColor="@color/gray"
-            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:lottie_fileName="sign_up_anim.json"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_login_with_google" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView" >
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/create_your_account"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/username"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edt_username"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:fontFamily="@font/poppins"
+                android:background="@drawable/edit_text_border"
+                android:hint="@string/input_your_username"
+                android:layout_marginTop="4dp"
+                android:textColorHint="@color/gray"
+                android:paddingStart="15dp"
+                android:paddingEnd="16dp"
+                android:autofillHints="username"
+                android:textSize="14sp"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:layout_marginTop="10dp"
+                android:text="@string/email"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:background="@drawable/edit_text_border"
+                android:hint="@string/input_your_email"
+                android:fontFamily="@font/poppins"
+                android:textColorHint="@color/gray"
+                android:paddingStart="15dp"
+                android:layout_marginTop="4dp"
+                android:paddingEnd="16dp"
+                android:autofillHints="username"
+                android:textSize="14sp"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/password"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <com.hakif.StoryApp.ui.customView.PassEditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_marginTop="5dp"
+                android:autofillHints="password"
+                android:background="@drawable/edit_text_border"
+                android:fontFamily="@font/poppins"
+                android:hint="@string/input_your_password"
+                android:inputType="textPassword"
+                android:paddingStart="15dp"
+                android:paddingEnd="16dp"
+                android:textColorHint="@color/gray"
+                android:textSize="14sp" />
+
+            <com.hakif.StoryApp.ui.customView.MyButton
+                android:id="@+id/btn_signUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/sign_up"
+                android:textColor="@color/white"
+            />
+
+            <TextView
+                android:id="@+id/tvSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins"
+                android:text="@string/don_t_have_an_account_sign_in"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_login_with_google" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

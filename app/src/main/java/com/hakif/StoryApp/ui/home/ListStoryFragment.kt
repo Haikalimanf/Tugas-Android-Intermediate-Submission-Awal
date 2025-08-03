@@ -39,12 +39,12 @@ class ListStoryFragment : Fragment() {
     }
 
     private fun showStory() {
-        adapter = StoryAdapter(mutableListOf()) {storyItem ->
+        adapter = StoryAdapter { storyItem ->
             val bottomSheet = DetailStoryFragment()
             val bundle = Bundle().apply {
-                putString("name", storyItem.name)
-                putString("description", storyItem.description)
-                putString("photoUrl", storyItem.photoUrl)
+                putString(DetailStoryFragment.EXTRA_NAME, storyItem.name)
+                putString(DetailStoryFragment.EXTRA_DESCRIPTION, storyItem.description)
+                putString(DetailStoryFragment.EXTRA_PHOTO_URL, storyItem.photoUrl)
             }
             bottomSheet.arguments = bundle
             bottomSheet.show(parentFragmentManager, DetailStoryFragment.TAG)
@@ -63,11 +63,7 @@ class ListStoryFragment : Fragment() {
                     }
                     is AuthState.Success -> {
                         binding.progressBar.visibility = View.GONE
-                        adapter.apply {
-                            story.clear()
-                            story.addAll(state.data.listStory)
-                            notifyDataSetChanged()
-                        }
+                        adapter.submitList(state.data.listStory)
                     }
                     is AuthState.Error -> {
                         Log.d("showStory", "showStory: ${state.message}")
