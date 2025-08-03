@@ -3,7 +3,6 @@ package com.hakif.StoryApp.data.repository
 import com.hakif.StoryApp.data.network.response.LoginResponse
 import com.hakif.StoryApp.data.network.response.RegisterResponse
 import com.hakif.StoryApp.data.network.retrofit.ApiConfig
-import com.hakif.StoryApp.data.network.retrofit.ApiService
 import javax.inject.Inject
 
 

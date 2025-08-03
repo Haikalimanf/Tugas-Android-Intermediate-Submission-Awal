@@ -6,20 +6,15 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.hakif.StoryApp.R
 import com.hakif.StoryApp.data.state.AuthState
 import com.hakif.StoryApp.databinding.ActivityAddStoryBinding
 import com.hakif.StoryApp.ui.MainActivity
-import com.hakif.StoryApp.ui.home.StoryViewModel
 import com.hakif.StoryApp.utils.getImageUri
 import com.hakif.StoryApp.utils.reduceFileImage
 import com.hakif.StoryApp.utils.uriToFile
@@ -151,8 +146,13 @@ class AddStoryActivity : AppCompatActivity() {
 
     private fun setSupportActionBarPage() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        val pageTitle = getString(R.string.second_fragment_label)
+        val pageTitle = getString(R.string.add_story_fragment_label)
         supportActionBar?.title = pageTitle
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 
     override fun onDestroy() {

@@ -47,6 +47,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
             android:text="@string/create_your_account"
             android:textColor="@color/black"
             android:textSize="18sp" />
@@ -55,14 +56,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins"
             android:text="@string/username"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/edt_username"
             android:layout_width="match_parent"
             android:layout_height="51dp"
+            android:fontFamily="@font/poppins"
             android:background="@drawable/edit_text_border"
             android:hint="@string/input_your_username"
             android:layout_marginTop="4dp"
@@ -76,10 +79,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
             android:layout_marginTop="10dp"
             android:text="@string/email"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/edt_email"
@@ -87,6 +91,7 @@
             android:layout_height="51dp"
             android:background="@drawable/edit_text_border"
             android:hint="@string/input_your_email"
+            android:fontFamily="@font/poppins"
             android:textColorHint="@color/gray"
             android:paddingStart="15dp"
             android:layout_marginTop="4dp"
@@ -100,29 +105,31 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/password"
+            android:fontFamily="@font/poppins"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <com.hakif.StoryApp.ui.customView.PassEditText
             android:id="@+id/edt_password"
             android:layout_width="match_parent"
             android:layout_height="51dp"
-            android:background="@drawable/edit_text_border"
-            android:hint="@string/input_your_password"
-            android:textColorHint="@color/gray"
-            android:fontFamily="@font/poppins"
             android:layout_marginTop="5dp"
+            android:autofillHints="password"
+            android:background="@drawable/edit_text_border"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/input_your_password"
+            android:inputType="textPassword"
             android:paddingStart="15dp"
             android:paddingEnd="16dp"
-            android:autofillHints="password"
-            android:textSize="14sp"
-            android:inputType="textPassword" />
+            android:textColorHint="@color/gray"
+            android:textSize="14sp" />
 
         <com.hakif.StoryApp.ui.customView.MyButton
             android:id="@+id/btn_signUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins"
             android:text="@string/sign_up"
             android:textColor="@color/white"
         />
@@ -135,6 +142,7 @@
             android:focusable="true"
             android:gravity="center"
             android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins"
             android:text="@string/don_t_have_an_account_sign_in"
             android:textColor="@color/gray"
             android:textSize="14sp"

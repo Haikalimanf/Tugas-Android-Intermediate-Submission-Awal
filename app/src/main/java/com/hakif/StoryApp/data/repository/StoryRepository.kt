@@ -1,6 +1,5 @@
 package com.hakif.StoryApp.data.repository
 
-import android.util.Log
 import com.hakif.StoryApp.data.datastore.DataStoreRepository
 import com.hakif.StoryApp.data.network.response.story.AddStoryResponse
 import com.hakif.StoryApp.data.network.response.story.GetStoryResponse
@@ -8,7 +7,6 @@ import com.hakif.StoryApp.data.network.retrofit.ApiConfig
 import kotlinx.coroutines.flow.first
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
-import java.io.File
 import javax.inject.Inject
 
 class StoryRepository @Inject constructor(

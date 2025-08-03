@@ -1,7 +1,5 @@
 package com.hakif.StoryApp.data.state
 
-import com.hakif.StoryApp.data.network.response.RegisterResponse
-
 sealed class AuthState<out T> {
     object Idle : AuthState<Nothing>()
     object Loading : AuthState<Nothing>()

@@ -2,12 +2,8 @@ package com.hakif.StoryApp.ui.opening
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import com.hakif.StoryApp.R
 import com.hakif.StoryApp.ui.MainActivity

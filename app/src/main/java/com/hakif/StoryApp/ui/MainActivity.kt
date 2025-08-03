@@ -2,15 +2,15 @@ package com.hakif.StoryApp.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
-import androidx.activity.viewModels
-import androidx.lifecycle.lifecycleScope
 import com.hakif.StoryApp.R
 import com.hakif.StoryApp.databinding.ActivityMainBinding
 import com.hakif.StoryApp.ui.auth.signIn.SignInActivity

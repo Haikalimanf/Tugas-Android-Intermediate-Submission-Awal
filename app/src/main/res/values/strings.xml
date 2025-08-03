@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Tugas Submission Pertama Story App</string>
+    <string name="app_name">Story App</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">List Story</string>
     <string name="second_fragment_label">Detail Story</string>
+    <string name="add_story_fragment_label">Add Story</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
@@ -28,5 +28,12 @@
     <string name="picture_story_from">Picture Story From User %s</string>
     <string name="empty_image_warning">Please upload the image file first</string>
     <string name="upload_success">Upload Success</string>
+    <string name="upload_your_photo">Upload Your Photo</string>
+    <string name="take_a_picture">Take A Picture</string>
+    <string name="icon_for_gallery">Icon for gallery</string>
+    <string name="icon_for_camera">Icon for camera</string>
+    <string name="photo_preview">Photo Preview</string>
+    <string name="close_button">Close button</string>
+    <string name="image_of_the_story">Image of the story</string>
 
 </resources>

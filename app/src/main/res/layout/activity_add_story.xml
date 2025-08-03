@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="24dp"
-            android:contentDescription=""
+            android:contentDescription="@string/photo_preview"
             app:srcCompat="@drawable/ic_place_holder"
             android:scaleType="centerCrop"
             tools:src="@tools:sample/avatars" />
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Upload Your Photo"
+            android:text="@string/upload_your_photo"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView" />
@@ -84,12 +84,13 @@
                     <ImageView
                         android:layout_width="49dp"
                         android:layout_height="49dp"
+                        android:contentDescription="@string/icon_for_camera"
                         android:src="@drawable/ic_camera" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Take A Picture" />
+                        android:text="@string/take_a_picture" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -117,6 +118,7 @@
                     <ImageView
                         android:layout_width="49dp"
                         android:layout_height="49dp"
+                        android:contentDescription="@string/icon_for_gallery"
                         android:src="@drawable/ic_gallery" />
 
                     <TextView

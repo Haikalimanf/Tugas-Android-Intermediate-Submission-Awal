@@ -2,7 +2,6 @@ package com.hakif.StoryApp.ui.addStory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.hakif.StoryApp.data.network.response.RegisterResponse
 import com.hakif.StoryApp.data.network.response.story.AddStoryResponse
 import com.hakif.StoryApp.data.repository.StoryRepository
 import com.hakif.StoryApp.data.state.AuthState
@@ -12,7 +11,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
-import java.io.File
 import javax.inject.Inject
 
 @HiltViewModel

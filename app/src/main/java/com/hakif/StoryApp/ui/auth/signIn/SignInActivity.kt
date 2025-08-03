@@ -15,12 +15,11 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.hakif.StoryApp.ui.MainActivity
 import com.hakif.StoryApp.R
 import com.hakif.StoryApp.data.state.AuthState
 import com.hakif.StoryApp.databinding.ActivitySignInBinding
+import com.hakif.StoryApp.ui.MainActivity
 import com.hakif.StoryApp.ui.auth.signUp.SignUpActivity
-import com.hakif.StoryApp.ui.auth.signUp.SignUpViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 

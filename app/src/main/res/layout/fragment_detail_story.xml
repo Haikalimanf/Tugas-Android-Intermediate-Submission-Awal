@@ -12,7 +12,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="close button"
+        android:contentDescription="@string/close_button"
         android:src="@drawable/ic_close"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="@string/image_of_the_story"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -36,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins"
         android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,6 +48,8 @@
     <TextView
         android:id="@+id/tv_Description"
         android:layout_width="match_parent"
+        android:fontFamily="@font/poppins"
+
         android:layout_height="wrap_content"
         tools:text="Description of the story goes here. It can be a long text that describes the story in detail."
         android:textSize="20sp"

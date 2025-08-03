@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Story App</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="first_fragment_label">Daftar Cerita</string>
+    <string name="second_fragment_label">Detail Cerita</string>
+    <string name="add_story_fragment_label">Tambah Cerita</string>
+    <string name="next">Berikutnya</string>
+    <string name="previous">Sebelumnya</string>
+
+    <string name="action_to_logOut">Keluar</string>
+    <string name="login_to_your_account">Masuk ke akun Anda</string>
+    <string name="email">Email</string>
+    <string name="input_your_email">Masukkan email Anda</string>
+    <string name="input_your_password">Masukkan kata sandi Anda</string>
+    <string name="password">Kata Sandi</string>
+    <string name="sign_in">Masuk</string>
+    <string name="don_t_have_an_account_sign_up">Belum punya akun? Daftar</string>
+    <string name="don_t_have_an_account_sign_in">Sudah punya akun? Masuk</string>
+    <string name="username">Nama Pengguna</string>
+    <string name="input_your_username">Masukkan nama pengguna Anda</string>
+    <string name="sign_up">Daftar</string>
+    <string name="post">Kirim</string>
+    <string name="cancel">Batal</string>
+    <string name="write_your_story_here">Tulis ceritamu di sini</string>
+    <string name="description">Deskripsi</string>
+    <string name="choose_from_gallery">Pilih dari Galeri</string>
+    <string name="create_your_account">Buat Akun Anda</string>
+    <string name="picture_story_from">Foto Cerita dari Pengguna %s</string>
+    <string name="empty_image_warning">Silakan unggah file gambar terlebih dahulu</string>
+    <string name="upload_success">Berhasil Diunggah</string>
+    <string name="upload_your_photo">Unggah Foto Anda</string>
+    <string name="take_a_picture">Ambil Gambar</string>
+    <string name="icon_for_gallery">Ikon untuk galeri</string>
+    <string name="icon_for_camera">Ikon untuk kamera</string>
+    <string name="photo_preview">Pratinjau Foto</string>
+    <string name="close_button">Tombol tutup</string>
+    <string name="image_of_the_story">Gambar dari cerita</string>
+
+</resources>
