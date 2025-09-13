@@ -8,6 +8,7 @@
     <string name="previous">Previous</string>
 
     <string name="action_to_logOut">Log Out</string>
+    <string name="action_to_maps">Google Maps</string>
     <string name="login_to_your_account">Login to your account</string>
     <string name="email">Email</string>
     <string name="input_your_email">Input your email</string>
@@ -35,5 +36,6 @@
     <string name="photo_preview">Photo Preview</string>
     <string name="close_button">Close button</string>
     <string name="image_of_the_story">Image of the story</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 </resources>

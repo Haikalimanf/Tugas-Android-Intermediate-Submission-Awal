@@ -9,6 +9,7 @@
     <string name="previous">Sebelumnya</string>
 
     <string name="action_to_logOut">Keluar</string>
+    <string name="action_to_maps">Google Maps</string>
     <string name="login_to_your_account">Masuk ke akun Anda</string>
     <string name="email">Email</string>
     <string name="input_your_email">Masukkan email Anda</string>
@@ -36,5 +37,6 @@
     <string name="photo_preview">Pratinjau Foto</string>
     <string name="close_button">Tombol tutup</string>
     <string name="image_of_the_story">Gambar dari cerita</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 </resources>

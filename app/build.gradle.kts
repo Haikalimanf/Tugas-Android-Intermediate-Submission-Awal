@@ -4,6 +4,7 @@ plugins {
     id("kotlin-parcelize")
     id("kotlin-kapt")
     alias(libs.plugins.dagger.hilt)
+    alias(libs.plugins.google.android.libraries.mapsplatform.secrets.gradle.plugin)
 }
 
 android {
@@ -55,6 +56,7 @@ dependencies {
     implementation(libs.lottie)
 
     implementation(libs.hilt.android)
+    implementation(libs.play.services.maps)
     kapt(libs.hilt.android.compiler)
 
     implementation(libs.kotlinx.coroutines.android)

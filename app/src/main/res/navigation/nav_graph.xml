@@ -31,5 +31,11 @@
         android:label="activity_add_story"
         tools:layout="@layout/activity_add_story" />
 
+    <activity
+        android:id="@+id/mapsActivity"
+        android:name="com.hakif.StoryApp.ui.maps.MapsActivity"
+        android:label="activity_maps"
+        tools:layout="@layout/activity_maps" />
+
 
 </navigation>

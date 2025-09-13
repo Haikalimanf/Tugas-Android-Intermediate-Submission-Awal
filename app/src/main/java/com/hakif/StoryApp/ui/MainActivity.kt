@@ -14,6 +14,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.hakif.StoryApp.R
 import com.hakif.StoryApp.databinding.ActivityMainBinding
 import com.hakif.StoryApp.ui.auth.signIn.SignInActivity
+import com.hakif.StoryApp.ui.maps.MapsActivity
 import com.hakif.StoryApp.ui.opening.SplashScreenViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -58,6 +59,12 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                     finish()
                 }
+                true
+            }
+            R.id.action_to_maps -> {
+                val intent = Intent(this@MainActivity, MapsActivity::class.java)
+                startActivity(intent)
+                finish()
                 true
             }
             else -> super.onOptionsItemSelected(item)
