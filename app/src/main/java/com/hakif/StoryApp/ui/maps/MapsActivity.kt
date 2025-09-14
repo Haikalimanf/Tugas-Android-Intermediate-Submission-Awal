@@ -24,6 +24,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
 
+    private val mapsViewModel: MapsViewModel by viewModels()
+
     private val storyViewModel: StoryViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,7 +58,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.uiSettings.isMapToolbarEnabled = true
 
         lifecycleScope.launch {
-            storyViewModel.getStoryState.collect { state ->
+            mapsViewModel.getLocationStoryState.collect { state ->
                 if (state is AuthState.Success) {
                     state.data.listStory.forEach { story ->
                         val lat = (story.lat as? Double) ?: 0.0

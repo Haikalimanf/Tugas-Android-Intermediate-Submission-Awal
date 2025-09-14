@@ -38,5 +38,7 @@
     <string name="close_button">Tombol tutup</string>
     <string name="image_of_the_story">Gambar dari cerita</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="retry">Coba Lagi</string>
+
 
 </resources>

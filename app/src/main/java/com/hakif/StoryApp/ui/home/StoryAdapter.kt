@@ -2,6 +2,7 @@ package com.hakif.StoryApp.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +12,7 @@ import com.hakif.StoryApp.databinding.ItemListStoryBinding
 
 class StoryAdapter(
     private val onItemClick: (ListStoryItem) -> Unit
-): ListAdapter<ListStoryItem,StoryAdapter.ViewHolder>(DIFF_CALLBACK) {
+): PagingDataAdapter<ListStoryItem,StoryAdapter.ViewHolder>(DIFF_CALLBACK) {
 
     inner class ViewHolder(
         private val binding: ItemListStoryBinding,

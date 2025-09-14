@@ -27,7 +27,7 @@ class MapsViewModel @Inject constructor(
         viewModelScope.launch {
             _getLocationStoryState.value = AuthState.Loading
             try {
-                val response = storyRepository.getStories()
+                val response = storyRepository.getStoriesWithLocation()
                 _getLocationStoryState.value = AuthState.Success(response)
             } catch (e: Exception) {
                 _getLocationStoryState.value = AuthState.Error(e.message ?: "Unknown error occurred")

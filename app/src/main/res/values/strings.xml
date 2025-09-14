@@ -37,5 +37,6 @@
     <string name="close_button">Close button</string>
     <string name="image_of_the_story">Image of the story</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="retry">Try Again</string>
 
 </resources>
