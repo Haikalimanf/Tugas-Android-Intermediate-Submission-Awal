@@ -3,7 +3,6 @@ package com.hakif.StoryApp.ui.maps
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -13,7 +12,6 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.hakif.StoryApp.R
 import com.hakif.StoryApp.data.state.AuthState
 import com.hakif.StoryApp.databinding.ActivityMapsBinding
-import com.hakif.StoryApp.ui.home.StoryViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import kotlin.getValue
@@ -26,7 +24,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private val mapsViewModel: MapsViewModel by viewModels()
 
-    private val storyViewModel: StoryViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,10 +31,19 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.mapsToolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = getString(R.string.title_activity_maps)
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressedDispatcher.onBackPressed()
+        return true
     }
 
     /**
@@ -57,14 +63,16 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.uiSettings.isCompassEnabled = true
         mMap.uiSettings.isMapToolbarEnabled = true
 
+        mapsViewModel.fetchStories()
+
         lifecycleScope.launch {
             mapsViewModel.getLocationStoryState.collect { state ->
                 if (state is AuthState.Success) {
                     state.data.listStory.forEach { story ->
                         val lat = (story.lat as? Double) ?: 0.0
                         val lon = (story.lon as? Double) ?: 0.0
-                        val name = story.name ?: ""
-                        val description = story.description ?: ""
+                        val name = story.name
+                        val description = story.description
                         val latLng = LatLng(lat, lon)
                         mMap.addMarker(
                             MarkerOptions()

@@ -64,7 +64,6 @@ class MainActivity : AppCompatActivity() {
             R.id.action_to_maps -> {
                 val intent = Intent(this@MainActivity, MapsActivity::class.java)
                 startActivity(intent)
-                finish()
                 true
             }
             else -> super.onOptionsItemSelected(item)

@@ -19,11 +19,7 @@ class MapsViewModel @Inject constructor(
     private val _getLocationStoryState = MutableStateFlow<AuthState<GetStoryResponse>>(AuthState.Loading)
     val getLocationStoryState: StateFlow<AuthState<GetStoryResponse>> get() = _getLocationStoryState
 
-    init {
-        fetchStories()
-    }
-
-    private fun fetchStories() {
+    fun fetchStories() {
         viewModelScope.launch {
             _getLocationStoryState.value = AuthState.Loading
             try {

@@ -36,7 +36,9 @@ class StoryRepository @Inject constructor(
     }
 
     suspend fun getStoriesWithLocation(): GetStoryResponse {
-        return apiService.getStories(location = 1)
+        val token = dataStoreRepository.getToken().first() ?: ""
+        val apiServiceWithToken = ApiConfig.getApiService(token)
+        return apiServiceWithToken.getStories(location = 1)
     }
 
     suspend fun addStory(
