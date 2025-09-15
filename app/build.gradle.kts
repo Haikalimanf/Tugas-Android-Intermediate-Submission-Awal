@@ -80,6 +80,8 @@ dependencies {
     // Testing
     androidTestImplementation(libs.androidx.core.testing)
     androidTestImplementation(libs.kotlinx.coroutines.test)
+    androidTestImplementation(libs.espresso.intents)
+    implementation(libs.androidx.espresso.idling.resource)
 
     testImplementation(libs.androidx.core.testing)
     testImplementation(libs.kotlinx.coroutines.test)
